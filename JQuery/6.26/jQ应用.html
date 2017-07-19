@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li{
+            width: 200px;
+            height: 100px;
+            background-color: #2ee5ed;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li class="li1"></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+</body>
+<script src="../JS/jquery-1.12.3.min.js"></script>
+<script type="text/javascript">
+    $("ul li").mouseenter(function(){
+        $(this).css("background-color","red").siblings().css("background-color","#2ee5ed");
+        console.log(123)
+    });
+</script>
+</html>
