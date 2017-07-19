@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .clock_stage{
+            perspective: 500px;
+        }
+        .clock{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="clock_stage">
+        <div class="clock">
+            <img src="images/qq/n1.png" alt="" class="n1">
+            <img src="images/qq/n2.png" alt="" class="n2">
+            <img src="images/qq/n3.png" alt="" class="n3">
+            <img src="images/qq/n4.png" alt="" class="n4">
+        </div>
+    </div>
+<script src="scripts/jquery-1.12.3.min.js" charset="utf-8"></script>
+<script src="scripts/jquery.mousewheel.min.js" charset="utf-8"></script>
+<script src="scripts/velocity.min.js" charset="utf-8"></script>
+    <script>
+        $('.clock').show().velocity({
+            "translateZ":"0"
+        },0)
+    </script>
+
+</body>
+</html>

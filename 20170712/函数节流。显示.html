@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .stage {
+            perspective: 500px;
+        }
+
+        img {
+            /*transform: rotateY(45deg);*/
+        }
+
+        @keyframes myfirst {
+            0% {
+                transform: rotateY(0deg);
+            }
+            25% {
+                transform: rotateY(15deg);
+            }
+            50% {
+                transform: rotateY(25deg);
+            }
+            100% {
+                transform: rotateY(45deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="stage">
+    <div class="unit">
+        <img src="images/qq/47.png" alt="">
+    </div>
+</div>
+<input value="点击我" type="button">
+<script src="scripts/jquery-1.12.3.min.js" charset="utf-8"></script>
+<script src="scripts/jquery.mousewheel.min.js" charset="utf-8"></script>
+<script src="scripts/velocity.min.js" charset="utf-8"></script>
+<script>
+    var index = 1;
+    var dex = 30;
+    $('input').click(function () {
+        index++;
+        console.log((dex));
+        console.log(index);
+//        if (index == 2) {
+        dex += 10;
+        $('img').fadeOut(2000);
+        $('img').fadeIn(2000);
+
+//            setTimeout(function () {
+//                document.getElementsByTagName('img')[0].style.transform = "rotateY(0deg)";
+//            },2000);
+//            index = 1;
+//        }
+    });
+
+    function aa() {
+        index = 1;
+    }
+</script>
+<style>
+    #hovertreetf {
+        border: 1px solid red;
+        width: 120px;
+        height: 120px;
+    }
+</style>
+<div id="hovertreetf">这是一个div，使用js操作transform移动。何问起</div>
+<script>
+
+    document.getElementById("hovertreetf").onclick = function () {
+        document.getElementById("hovertreetf").style.transform = "translateX(100px)";
+    }
+</script>
+</body>
+</html>
